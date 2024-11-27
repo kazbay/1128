@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学園祭</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*モバイルファースト*/
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        .nav ul {
+            margin: 30px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        main {
+            background-color: aqua;
+            margin: 90px auto 90px auto;
+            box-sizing: border-box;
+            padding: 0 2%;
+            max-width: auto ;
+        }
+
+        img {
+            width: 260px;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+            color: #183af5d8;
+        }
+
+        .header-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            text-shadow: 0 0 0px rgb(243, 222, 182), 0 0 15px #fff;
+        }
+
+        .header-pattern {
+            position: absolute;
+            background-size: auto auto;
+        }
+
+        header video {
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .header-text, .header-pattern, header video {
+            width: 100%;
+            height: 100vh;
+        }
+        /*PC用デザインとして付けた足すデザイン　横幅が1024PX以上の場合*/
+
+        @media (min-width: 1024px) {
+            main {
+                max-width: 1000px;
+            }
+            .items {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            img {
+                width: 300px;
+            }
+        }
+        .logo{
+            text-align: center;
+        }
+        video{
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/2019denpa_ph002b.jpg" alt="">
+        </div>
+        <div>
+            <h1>東京電子学園祭</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>ホーム</li>
+                <li>お知らせ</li>
+                <li>店舗情報</li>
+                <li>アクセス</li>
+                <li>メニュー</li>
+                <li>お問い合わせ</li>
+            </ul>
+        </nav>
+        <div class="header-pattern"></div>
+    </header>
+    <main>
+        <div class="items">
+            <div>
+                <img src="img/20241026_114023.JPG" alt="推しドリンク">
+                <p>推しドリンク</p>
+            </div>
+            <div>
+                <img src="img/20241026_105729.JPG" alt="やなぎさわ">
+                <p>やなぎさわ</p>
+            </div>
+            <div>
+                <img src="img/20241026_105812.JPG" alt="ワッフル">
+                <p>ワッフル</p>
+            </div>
+            <div>
+                <img src="img/20241026_111549.JPG" alt="TECトリオ">
+                <p>TECトリオ</p>
+            </div>
+            <div>
+                <img src="img/1729910835188.jpg" alt="射的1等">
+                <p>射的1等</p>
+            </div>
+            <div>
+                <video autoplay muted loop src="img/VID_20241019_154524.mp4"></video>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
